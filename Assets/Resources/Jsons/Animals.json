@@ -1,0 +1,10 @@
+[
+	{
+		"AnimalTypeStr": "CAT",
+		"Noise": "Meow"
+	},
+	{
+		"AnimalTypeStr": "DOG",
+		"Noise": "Woof"
+	}
+]
