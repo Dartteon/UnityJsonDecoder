@@ -1,10 +1,10 @@
 [
 	{
-		"AnimalTypeStr": "CAT",
+		"AnimalSpecies": "CAT",
 		"Noise": "Meow"
 	},
 	{
-		"AnimalTypeStr": "DOG",
+		"AnimalSpecies": "DOG",
 		"Noise": "Woof"
 	}
 ]

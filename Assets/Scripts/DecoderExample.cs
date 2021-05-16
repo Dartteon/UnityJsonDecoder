@@ -1,10 +1,11 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class DecoderExample : MonoBehaviour {
     void Start() {
-        Debug.Log(AnimalType.CAT + " goes " + AnimalDecoder.LoadDetails(AnimalType.CAT).Noise);
-        Debug.Log(AnimalType.DOG + " goes " + AnimalDecoder.LoadDetails(AnimalType.DOG).Noise);
+        string catNoise = AnimalDecoder.LoadDetails(AnimalSpecies.CAT).Noise;
+        Debug.Log("Cat goes " + catNoise);
+
+        string dogNoise = AnimalDecoder.LoadDetails(AnimalSpecies.DOG).Noise;
+        Debug.Log("Dog goes " + dogNoise);
     }
 }

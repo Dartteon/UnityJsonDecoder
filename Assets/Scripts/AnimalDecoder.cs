@@ -1,11 +1,7 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-public class AnimalDecoder : JsonDecoder<AnimalType, AnimalDetails> {
+﻿public class AnimalDecoder : JsonDecoder<AnimalSpecies, AnimalDetails> {
     public static AnimalDecoder instance;
 
-    public static AnimalDetails LoadDetails(AnimalType AnimalType) {
+    public static AnimalDetails LoadDetails(AnimalSpecies AnimalType) {
         if (instance == null) {
             instance = new AnimalDecoder();
         }

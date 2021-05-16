@@ -1,6 +1,6 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
+using Newtonsoft.Json;
 
 public class JsonDecoder<E, D>
     where E : System.Enum
@@ -27,7 +27,7 @@ public class JsonDecoder<E, D>
     private void initDictionary() {
         map = new Dictionary<E, D>();
         TextAsset textAsset = Resources.Load<TextAsset>("Jsons/" + GetJsonFileName());
-        D[] details = JsonHelper.GetJsonArray<D>(textAsset.text);
+        List<D> details = JsonConvert.DeserializeObject<List<D>>(textAsset.text);
         foreach (D d in details) {
             d.Init();
             E enumCode = d.GetEnumCode();

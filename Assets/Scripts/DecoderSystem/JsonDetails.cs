@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using UnityEngine;
 
 [Serializable]
@@ -7,6 +6,8 @@ public class JsonDetails<E> {
 
     public virtual void Init() {
         // Override if necessary
+        // If you need to set data that isn't part of the JSON
+        // e.g Calculate derived stats
     }
 
     public virtual E GetEnumCode() {
